@@ -4,7 +4,7 @@ class cTentacleAgent : OMI_BaseResource
   [Key] string Name;
   [Write,ValueMap{"Present", "Absent"},Values{"Present", "Absent"}] string Ensure;
   [Write,ValueMap{"Started","Stopped"},Values{"Started", "Stopped"}] string State;
-
+  [Write] Boolean AutoRegister;
   [Write] string ApiKey;
   [Write] string OctopusServerUrl;
   [Write] string Environments[];
@@ -13,4 +13,6 @@ class cTentacleAgent : OMI_BaseResource
   [Write] string nicType;
   [Write] boolean nicName;
   [Write] string DefaultApplicationDirectory;
+  [Write] string OctopusHomeDirectory;
+  [Write] string OctopusServerThumbprint;
 };
